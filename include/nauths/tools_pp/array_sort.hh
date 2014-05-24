@@ -1,7 +1,13 @@
 //
-// array_sort.hh for tools
-// Made by nicuveo <crucuny@gmail.com>
+// Copyright Antoine Leblanc 2010 - 2014
+// Distributed under the MIT license.
 //
+// http://nauths.fr
+// http://github.com/nicuveo
+// mailto://antoine.jp.leblanc@gmail.com
+//
+
+
 
 #ifndef TOOLS_PP_ARRAY_SORT_HH_
 # define TOOLS_PP_ARRAY_SORT_HH_

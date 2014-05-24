@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-for header in *.hh ; do
+for header in "$(dirname $0)"/../include/*/*/*.hh ; do
     CODE=`cpp -D TOOLS_PP_UNIT_TESTS $header | tr -d ' ' | sed -n 's/^TEST://p'`
     TESTS_N=0
     TESTS_R=0
@@ -12,7 +12,7 @@ for header in *.hh ; do
         fi
         TESTS_N=$(( $TESTS_N + 1 ))
     done
-    printf "%-32s" "$header"
+    printf "%-32s" $(basename "$header")
     if [ "$TESTS_R" -eq "$TESTS_N" ] ; then
         echo -ne "[\033[1;32mOK\033[0m]"
     else
